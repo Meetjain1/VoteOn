@@ -22,9 +22,9 @@
 
 ![Login Page](https://github.com/user-attachments/assets/307c784c-ec14-4a3c-91c8-b5a55ec612b7)
 
-![Admin Page](https://github.com/user-attachments/assets/08aa302f-ba7b-4564-9da4-ed416858e67f)
+![Admin Page](https://github.com/user-attachments/assets/6c7285ee-159a-4dc3-86b1-074b86b0404f)
 
-![Voter Page](https://github.com/user-attachments/assets/026fdb56-de76-4d39-9e49-7809e3cfd1dc)
+![Voter Page](https://github.com/user-attachments/assets/dea75510-bf6d-4d4d-899c-66b316e96216)
 
 ## Installation
 
