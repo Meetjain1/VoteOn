@@ -1,84 +1,150 @@
-# BlockChainVoting
+# Decentralized-Voting-System-Using-Ethereum-Blockchain
 
-A blockchain-based E-voting system, created as the final year project of Shri Bhagubhai Mafatlal Polytechnic. Teammates include me, Sayyam Gada and Charmee Mehta.
-> The application is MIT-Licensed.
+#### The Decentralized Voting System using Ethereum Blockchain is a secure and transparent solution for conducting elections. Leveraging Ethereum's blockchain technology, this system ensures tamper-proof voting records, enabling users to cast their votes remotely while maintaining anonymity and preventing fraud. Explore this innovative project for trustworthy and decentralized voting processes.
 
-## Build Setup
+#### PS: This project is not maintained anymore.
 
-```bash
-# install dependencies
-npm install
+## Features
+-  Implements JWT for secure voter authentication and authorization.
+-  Utilizes Ethereum blockchain for tamper-proof and transparent voting records.
+-  Removes the need for intermediaries, ensuring a trustless voting process.
+-  Admin panel to manage candidates, set voting dates, and monitor results.
+-  Intuitive UI for voters to cast votes and view candidate information.
 
-# serve with hot reload at localhost:3000
-npm start
-```
+## Requirements
+- Node.js (version – 18.14.0)
+- Metamask
+- Python (version – 3.9)
+- FastAPI
+- MySQL Database (port – 3306)
 
-Create your own <b>.env</b> file and the file should contain:
-```bash
-EMAIL=YOUR_EMAIL_ID
-PASSWORD=YOUR_PASSWORD_FOR_EMAIL_ID
-```
-Install MetaMask extension (https://metamask.io/download.html) and make sure to have some Ether to test the application locally. Ether can be fetched from Rinkeby Faucet (https://faucet.rinkeby.io)
+## Screenshots
 
-#### Note:
-- Make sure to install Node.js v11.14.0 to make sure the app runs fine. Testing for other node versions is yet to be done.
-- MongoDB must be working in background on localhost:27017
+![Login Page](https://github.com/user-attachments/assets/307c784c-ec14-4a3c-91c8-b5a55ec612b7)
 
-###### Please star the repo if it helped you in any way!
+![Admin Page](https://github.com/user-attachments/assets/08aa302f-ba7b-4564-9da4-ed416858e67f)
 
-## Tech Stack:
+![Voter Page](https://github.com/user-attachments/assets/026fdb56-de76-4d39-9e49-7809e3cfd1dc)
 
-- Solidity/Web3 (for writing/connecting the Blockchain contract)
-- Next.js & Semantic UI React (front-end)
-- MongoDB/ExpressJS/Node.js (back-end)
-- IPFS (file storage for images)
+## Installation
 
-## Screenshots of the app:
+1. Open a terminal.
 
-Homepage of the application:
+2. Clone the repository by using the command
 
-![](screenshots/homepage.PNG)
+3. Download and install [Ganache](https://trufflesuite.com/ganache/).
 
-Company registers/logs in:
+4. Create a workspace named <b>developement</b>, in the truffle projects section add `truffle-config.js` by clicking `ADD PROJECT` button.
 
-![](screenshots/company_login.PNG)
+5. Download [Metamask](https://metamask.io/download/) extension for the browser.
 
-Company creates an election if not created:
+6. Now create wallet (if you don't have one), then import accounts from ganache.
 
-![](screenshots/create_election.PNG)
+7. Add network to the metamask. ( Network name - Localhost 7575, RPC URl - http://localhost:7545, Chain ID - 1337, Currency symbol - ETH)
 
-Dashboard on successful election creation:
+8. Open MySQL and create database named <b>voter_db</b>. (DON'T USE XAMPP)
 
-![](screenshots/dashboard.PNG)
+9. In the database created, create new table named <b>voters</b> in the given format and add some values.
 
-List of candidates for the election (here, you can add candidates):
+           CREATE TABLE voters (
+           voter_id VARCHAR(36) PRIMARY KEY NOT NULL,
+           role ENUM('admin', 'user') NOT NULL,
+           password VARCHAR(255) NOT NULL
+           );
+   <br>
 
-![](screenshots/candidate_list.PNG)
+        +--------------------------------------+-------+-----------+
+        | voter_id                             | role  | password  |
+        +--------------------------------------+-------+-----------+
+        |                                      |       |           |
+        +--------------------------------------+-------+-----------+
 
-Candidate has been notified on the mail:
+12. Install truffle globally
+    
+        npm install -g truffle
 
-![](screenshots/candidate_registeration_mail.PNG)
+14. Go to the root directory of repo and install node modules
 
-List of voters for the election (here, you can add voters):
+        npm install
 
-![](screenshots/voterlist.PNG)
+15. Install python dependencies
 
-Voters have been sent their secure usernames and passwords on the mail:
+        pip install fastapi mysql-connector-python pydantic python-dotenv uvicorn uvicorn[standard] PyJWT
 
-![](screenshots/voter_registeration_mail.PNG)
+## Usage
 
-Voter login page:
+#### Note: Update the database credentials in the `./Database_API/.env` file.
 
-![](screenshots/voter_login.PNG)
+1. Open terminal at the project directory
 
-Successful voting scenario:
+2. Open Ganache and it's <b>development</b> workspace.
 
-![](screenshots/successful_voting.PNG)
+3. open terminal in project's root directory and run the command
 
-Unsuccessful voting scenario:
+        truffle console
+   then compile the smart contracts with command
 
-![](screenshots/unsuccessful_voting.PNG)
+        compile
+   exit the truffle console
 
-Notification to each candidate and voter for the winner of candidates:
+5. Bundle app.js with browserify
+    
+        browserify ./src/js/app.js -o ./src/dist/app.bundle.js
 
-![](screenshots/winner_candidate_mail.PNG)
+2. Start the node server server
+    
+        node index.js
+
+3. Navigate to `Database_API` folder in another terminal
+    
+        cd Database_API
+    then start the database server by following command
+
+        uvicorn main:app --reload --host 127.0.0.1
+
+4. In a new terminal migrate the truffle contract to local blockchain
+    
+        truffle migrate
+
+You're all set! The Voting app should be up and running now at http://localhost:8080/.<br>
+
+## Code Structure
+
+    ├── blockchain-voting-dapp            # Root directory of the project.
+        ├── build                         # Directory containing compiled contract artifacts.
+        |   └── contracts                 
+        |       ├── Migrations.json       
+        |       └── Voting.json           
+        ├── contracts                     # Directory containing smart contract source code.
+        |   ├── 2_deploy_contracts.js     
+        |   ├── Migrations.sol            
+        |   └── Voting.sol                
+        ├── Database_API                  # API code for database communication.
+        |   └── main.py                   
+        ├── migrations                    # Ethereum contract deployment scripts.
+        |   └── 1_initial_migration.js    
+        ├── node_modules                  # Node.js modules and dependencies.
+        ├── public                        # Public assets like favicon.
+        |   └── favicon.ico               
+        ├── src                           
+        |   ├── assets                    # Project images.
+        |   |   └── eth5.jpg              
+        |   ├── css                       # CSS stylesheets.
+        |   |   ├── admin.css             
+        |   |   ├── index.css             
+        |   |   └── login.css             
+        |   ├── dist                      # Compiled JavaScript bundles.
+        |   |   ├── app.bundle.js         
+        |   |   └── login.bundle.js       
+        |   ├── html                      # HTML templates.
+        |   |   ├── admin.html            
+        |   |   ├── index.html            
+        |   |   └── login.html            
+        |   └── js                        # JavaScript logic files.
+        |       ├── app.js                
+        |       └── login.js              
+        ├── index.js                      # Main entry point for Node.js application.
+        ├── package.json                  # Node.js package configuration.
+        ├── package-lock.json             # Lockfile for package dependencies.
+        ├── README.md                     # Project documentation.
+        └── truffle-config.js                    # Truffle configuration file.
