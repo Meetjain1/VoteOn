@@ -10,9 +10,9 @@
 -  Intuitive UI for voters to cast votes and view candidate information.
 
 ## Requirements
-- Node.js (version – 18.14.0)
+- Node.js
 - Metamask
-- Python (version – 3.9)
+- Python 
 - FastAPI
 - MySQL Database (port – 3306)
 
