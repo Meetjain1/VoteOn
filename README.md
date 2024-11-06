@@ -1,6 +1,6 @@
-# Decentralized-Voting-System-Using-Ethereum-Blockchain
+# VoteOn (The Perfect Decentralized Election System on Ethereum)
 
-#### The Decentralized Voting System using Ethereum Blockchain is a secure and transparent solution for conducting elections. Leveraging Ethereum's blockchain technology, this system ensures tamper-proof voting records, enabling users to cast their votes remotely while maintaining anonymity and preventing fraud. Explore this innovative project for trustworthy and decentralized voting processes.
+#### VoteOn offers a secure and transparent solution for modern elections. By harnessing the power of Ethereum’s blockchain, this system creates tamper-proof voting records, allowing users to cast votes remotely while ensuring anonymity and preventing fraud. This innovative project represents a step forward in trustworthy, decentralized voting, making it ideal for secure and fair electoral processes.
 
 ## Features
 -  Implements JWT for secure voter authentication and authorization.
