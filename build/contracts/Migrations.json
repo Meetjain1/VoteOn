@@ -10,7 +10,7 @@
     {
       "constant": true,
       "inputs": [],
-      "name": "last_completed_migration",
+      "name": "last_completed_migration", 
       "outputs": [
         {
           "internalType": "uint256",
