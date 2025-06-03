@@ -96,11 +96,11 @@ The system follows a three-tier architecture:
 
 ## Screenshots
 
-![Login Page](./src/assets/screenshots/login.png)
+![Login Page](./src/assets/login.png)
 
-![Admin Page](./src/assets/screenshots/admin.png)
+![Admin Page](./src/assets/admin.png)
 
-![Voter Page](./src/assets/screenshots/voter.png)
+![Voter Page](./src/assets/index.png)
 
 ## Future Enhancements
 
