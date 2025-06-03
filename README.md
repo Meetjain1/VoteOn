@@ -94,45 +94,13 @@ The system follows a three-tier architecture:
   * API key rotation
   * IP whitelisting
 
-## Code Structure
+## Screenshots
 
-```
-├── blockchain-voting-dapp            # Root directory of the project.
-    ├── build                         # Directory containing compiled contract artifacts.
-    |   └── contracts                 
-    |       ├── Migrations.json       
-    |       └── Voting.json           
-    ├── contracts                     # Directory containing smart contract source code.
-    |   ├── 2_deploy_contracts.js     
-    |   ├── Migrations.sol            
-    |   └── Voting.sol                
-    ├── Database_API                  # API code for database communication.
-    |   └── main.py                   
-    ├── migrations                    # Ethereum contract deployment scripts.
-    |   └── 1_initial_migration.js    
-    ├── node_modules                  # Node.js modules and dependencies.
-    ├── public                        # Public assets like favicon.
-    |   └── favicon.ico               
-    ├── src                           
-    |   ├── assets                    # Project images.
-    |   |   └── eth5.jpg              
-    |   ├── css                       # CSS stylesheets.
-    |   |   ├── admin.css             
-    |   |   ├── index.css             
-    |   |   └── login.css             
-    |   ├── dist                      # Compiled JavaScript bundles.
-    |   |   ├── app.bundle.js         
-    |   |   └── login.bundle.js       
-    |   ├── html                      # HTML templates.
-    |   |   ├── admin.html            
-    |   |   ├── index.html            
-    |   |   └── login.html            
-    |   └── js                        # JavaScript logic files.
-    |       ├── app.js                
-    |       └── login.js              
-    ├── index.js                      # Main entry point for Node.js application.
-    └── truffle-config.js             # Truffle configuration file.
-```
+![Login Page](./src/assets/screenshots/login.png)
+
+![Admin Page](./src/assets/screenshots/admin.png)
+
+![Voter Page](./src/assets/screenshots/voter.png)
 
 ## Future Enhancements
 
@@ -154,7 +122,3 @@ The system follows a three-tier architecture:
    - Layer 2 solutions integration
    - Sharding support
    - Optimistic rollups
-
-## Contributing
-
-We welcome contributions! Please feel free to submit a Pull Request.
