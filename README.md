@@ -1,49 +1,20 @@
 # VoteOn (The Perfect Decentralized Election System on Ethereum)
 
-#### VoteOn offers a secure and transparent solution for modern elections. By harnessing the power of Ethereum's blockchain, this system creates tamper-proof voting records, allowing users to cast votes remotely while ensuring anonymity and preventing fraud. This innovative project represents a step forward in trustworthy, decentralized voting, making it ideal for secure and fair electoral processes.
+#### VoteOn offers a secure and transparent solution for modern elections. By harnessing the power of Ethereum’s blockchain, this system creates tamper-proof voting records, allowing users to cast votes remotely while ensuring anonymity and preventing fraud. This innovative project represents a step forward in trustworthy, decentralized voting, making it ideal for secure and fair electoral processes.
 
 ## Features
-- **Secure Authentication & Authorization**: Implements JSON Web Tokens (JWT) for robust and secure voter authentication and role-based authorization (Admin/Voter), ensuring that only verified users can access specific functionalities.
-- **Blockchain-Powered Transparency**: Leverages the Ethereum blockchain to create immutable and transparent voting records. Every vote is a transaction that can be audited, yet voter anonymity is maintained.
-- **Decentralized & Trustless**: Eliminates the need for central intermediaries, fostering a trustless voting environment where the integrity of the election process is guaranteed by the decentralized nature of the blockchain.
-- **Comprehensive Admin Dashboard**: Provides administrators with a powerful interface to:
-    - Manage election candidates (add, remove, update).
-    - Configure voting periods (start and end dates/times).
-    - Monitor election results in real-time.
-    - View detailed analytics and visualizations of voting data.
-    - Oversee voter registration and verification processes.
-- **User-Friendly Voter Interface**: Offers an intuitive and accessible UI for voters to:
-    - Easily cast their votes for preferred candidates.
-    - Receive real-time confirmation of their vote being successfully recorded on the blockchain.
-    - Access detailed information about each candidate.
-    - Verify their vote on the blockchain.
-- **Double-Voting Prevention**: Smart contract logic and backend checks are implemented to prevent any attempts at double-voting, ensuring each voter can only cast one vote per election.
-- **Enhanced System Security**: Incorporates measures such as encrypted data transmission, secure smart contract development practices, and protection against common web vulnerabilities.
+-  Implements JWT for secure voter authentication and authorization.
+-  Utilizes Ethereum blockchain for tamper-proof and transparent voting records.
+-  Removes the need for intermediaries, ensuring a trustless voting process.
+-  Admin panel to manage candidates, set voting dates, and monitor results.
+-  Intuitive UI for voters to cast votes and view candidate information.
 
-## Technology Stack
-
-### Frontend
-*   **Core JavaScript**: Utilizes vanilla JavaScript for core DApp logic and interactivity.
-*   **Web3 Integration**: Web3.js for communication with the Ethereum blockchain (interacting with Metamask and smart contracts).
-*   **Styling**: CSS3 for custom styling.
-*   **Build Tools**: Browserify for bundling JavaScript modules.
-*   **Wallet Connection**: MetaMask for user authentication and transaction signing.
-
-### Backend
-*   **Server-Side Logic**: Node.js for the main application server.
-*   **API Framework (Database Interaction)**: FastAPI (Python) for creating a robust API to interact with the MySQL database.
-*   **Authentication**: JWT (JSON Web Tokens) handled by the backend services.
-*   **Database**: MySQL for storing user data, roles, and other non-blockchain critical information.
-
-### Blockchain
-*   **Network**: Ethereum (utilizing a local development network like Ganache during development).
-*   **Smart Contracts**: Solidity for writing the election and voting logic.
-*   **Development Framework**: Truffle Suite for compiling, deploying, and testing smart contracts.
-*   **Local Blockchain**: Ganache for local development and testing of blockchain interactions.
-
-### Development & Operational Tools
-*   **Version Control**: Git & GitHub.
-*   **Package Management**: npm (for Node.js), pip (for Python).
+## Requirements
+- Node.js
+- Metamask
+- Python 
+- FastAPI
+- MySQL Database (port – 3306)
 
 ## Screenshots
 
